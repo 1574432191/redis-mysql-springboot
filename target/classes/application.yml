@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource	#  当前数据源操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+  redis:
+    host: 192.168.111.128
+    port: 6379
+    database: 0
+    timeout: 6
+    jedis:
+      pool:
+        max-idle: 500
+        min-idle: 50
+        max-wait:  -1
+        max-active: -1
+    #password: 123456
+    topic: __keyevent@0__:expired
+  task:
+    pool:
+      corePoolSize: 10
+      maxPoolSize: 20
+      keepAliveSeconds: 60
+      queueCapacity: 100
+      threadNamePrefix: myThreadPool
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.gjq.pojo

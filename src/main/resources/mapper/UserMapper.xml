@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gjq.mapper.UserMapper">
+<select id="findByUsername" parameterType="string" resultType="java.util.Map">
+select * from user where username=#{username}
+</select>
+<insert id="addUsers" parameterType="com.gjq.pojo.User" >
+insert into user values(null,#{name},#{password},#{age},#{email},#{phoneNumber},#{username})
+</insert> 
+<update id="updateUser" parameterType="com.gjq.pojo.User">
+ update user set username=#{username},age=#{age},email=#{email}
+  ,name=#{name},phoneNumber=#{phoneNumber},password=#{password}
+</update>
+</mapper>

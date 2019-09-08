@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Springboot_Redis_Mysql
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com.gjq
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/Springboot_R
+ edis_Mysql/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
